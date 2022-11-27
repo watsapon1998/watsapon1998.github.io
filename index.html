@@ -116,9 +116,18 @@
             font-size: 32px;
             border-radius: 8px;
         }
+
+        .audio {
+            display: none;
+        }
     </style>
 </head>
 <body>
+    <div class="audio">
+        <audio src="./audio/HappyBirthday.mp3">
+            <p>If you are reading this, it is because your browser does not support the audio element.</p>
+        </audio>
+    </div>   
     <div class="container-fluid py-5">
         <div class="row">
             <div class="col-12 text-center mb-3">
@@ -227,6 +236,7 @@
                 autoplay: true,
                 autoplaySpeed: 2000,
                 dots: false,
+                arrows: false,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 asNavFor: '.cakeBanner',
@@ -237,6 +247,7 @@
                 slidesToScroll: 1,
                 asNavFor: '.LoveBanner',
                 dots: false,
+                arrows: false,
                 centerMode: false,
                 centerPadding: '75px',
                 focusOnSelect: true,
@@ -250,14 +261,14 @@
             });
             // random price
             //var min = 1;
-            //var max = 5;            
+            //var max = 5;
             //$("#randomPrice").click(function () {
             //    // and the formula is:
             //    var random = Math.floor(Math.random() * (max - min + 1)) + min;
             //    alert(random);
             //});
         });
-       
+
     </script>
 </body>
 </html>
