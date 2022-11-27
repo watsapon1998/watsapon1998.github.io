@@ -246,8 +246,15 @@
 
 
             // random price
-            var randNum = Math.floor(Math.random() * 5) + 1;
-            alert(randNum);
+            //var min = 1;
+            //var max = 5;
+            //// and the formula is:
+            //var random = Math.floor(Math.random() * (max - min + 1)) + min;
+            $("#randomPrice").click(function () {
+                var randNum = Math.floor(Math.random() * 5) + 1;
+                alert(randNum);
+                /*alert(random);*/
+            });
         });
        
     </script>
