@@ -15,6 +15,7 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://kenwheeler.github.io/slick/slick/slick-theme.css"></script>
     <title>สุขสันต์วันเกิดนะคะ</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="https://i.imgur.com/2nk0wyq.png">
 
     <style>
         body {
@@ -42,7 +43,7 @@
         }
 
         #LoveModal .modal-header {
-            border-bottom: 0;
+            border-bottom: 1px solid crimson;
         }
 
         #LoveModal .modal-header > h5 {
@@ -55,7 +56,7 @@
         }
 
         #LoveModal .modal-footer {
-            border-top: 0;
+            border-top: 1px solid crimson;
         }
 
         #LoveModal .modal-footer > button {
@@ -211,7 +212,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-love-primary">Jub Jub</button>
+                    <button id="randomPrice" type="button" class="btn btn-love-primary">Jub Jub</button>
                 </div>
             </div>
         </div>
@@ -240,7 +241,18 @@
                 infinite: true,
                 adaptiveHeight: true
             });
+
+
+            // random price
+            var min = 1;
+            var max = 5;
+            // and the formula is:
+            var random = Math.floor(Math.random() * (max - min + 1)) + min;
+            $("#randomPrice").click(function () {
+                alert(random);
+            });
         });
+       
     </script>
 </body>
 </html>
